@@ -45,3 +45,33 @@ p,blockquote{
 }
 input,textarea,button:focus{outline: none;}
 h1,h2,h3,h4,h5,h6,p,blockquote {margin: 0;}
+/****************DISEÑO*******************/
+.cabecera{
+    width: 100%;
+    height: 160px;
+    position: fixed;
+    transition:all 0.3s;
+    z-index:52;
+}
+.cabecera__nombre{
+    position: absolute;
+    top: 30px; left: 30px;
+    z-index:50;
+    transition:all 0.3s;
+    color: #FF8DB1;
+}
+.cabecera__nombre:hover{
+    color: #000;
+}
+.cabecera__nav{
+    display:none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    background: #40F5EC;
+    opacity: .9;
+}
+.seccion{
+    height: 100vh;
+}
