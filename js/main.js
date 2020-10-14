@@ -9,10 +9,10 @@ $(document).ready(function () {
     /*para que el logo altere sus letras */
     var elm = document.getElementById("logo");
     var check = "ಠ_ಠ Clara Albalá";
-    var name = "xxxxxxxxxxxxx";
+    var name = "xxxxxxxxxxxxxxx";
     var array_search = ["A","a","B","b","c","D","d","E","e","F"," ","G","g","H","h","I","i","J",
                         "j","K","k","L","l","ø","R","r","N","n","M","m","S","s","T","t"," ","x",
-                        "U","u","V","v"," ","Å","å","z","q","P","p","⨀","⋋","⊠","⊞","⊡","∎"];
+                        "U","u","V","v"," ","Å","á","z","q","P","p","⨀","⋋","⊠","⊞","⊡","∎"];
     function theLoop() {
     setTimeout(function () {
         
@@ -28,9 +28,9 @@ $(document).ready(function () {
         elm.innerHTML = name;
         }
         if( name === check) {          // If i > 0, keep going
-        console.log('done')     // Call the loop again, and pass it the current value of i
+            console.log('done')     // Call the loop again, and pass it the current value of i
         }else{
-        theLoop(); 
+            theLoop(); 
         }
     }, 100);
     };
