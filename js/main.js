@@ -9,7 +9,7 @@ $(document).ready(function () {
     /*para que el logo altere sus letras */
     var elm = document.getElementById("logo");
     var check = "ಠ_ಠ Clara Albalá";
-    var name = "xxxxxxxxxxxxxxx";
+    var name = "xxxxxxxxxxxxxxxx";
     var array_search = ["A","a","B","b","C","c","D","d","E","e","F"," ","G","g","H","h","I","i","J",
                         "j","K","k","L","l","ø","R","r","N","n","M","m","S","s","T","t"," ","x",
                         "U","u","V","v"," ","Å","á","z","q","P","p","⨀","⋋","⊠","⊞","⊡","∎","ಠ","_"];
