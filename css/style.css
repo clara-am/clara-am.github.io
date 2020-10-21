@@ -10,7 +10,7 @@ html, body {
     height: 100vh;
 }
 body{
-    overflow:hidden;
+    /*overflow:hidden;*/
     font-weight: 400;
     font-size: 15px;
     background: #F3F4EE;
@@ -29,17 +29,37 @@ ul{
     margin:0;list-style: none; padding: 0;
 }
 p,blockquote{
-    line-height: 1.7;
+    line-height: 1.9;
+    letter-spacing: 0.5px;
 }
 input,textarea,button:focus{outline: none;}
-h1,h2,h3,h4,h5,h6,p,blockquote {margin: 0;}
+h1,h2,h3,h4,h5,h6,p,blockquote {margin: 0; letter-spacing: 1px;}
+blockquote {
+    border-left: 10px solid #FB8500;
+    margin: 0 15px;
+    padding: 0.5em 15px;
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+blockquote:before {
+    color: #FB8500;
+    content: "“";
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+blockquote p {
+    display: inline;
+}
 /*****colores***********/
 /*
-FF89AE dark pink
-FFCDBF light melon
+https://coolors.co/8ecae6-219ebc-023047-ffb703-fb8500
 F3F4EE light grey
-00F4EB fluorescent blue
-CDF7F0 light cyan
+FB8500 Orange
+FFB703 Honey yellow
+023047 Prussian Blue
+219EBC Blue green
+8ECAE6 Light cornflower blue
 */
 /****************DISEÑO*******************/
 .cabecera{
@@ -50,35 +70,193 @@ CDF7F0 light cyan
 }
 .cabecera__nombre{
     z-index:50;
-    font-family: 'Roboto', sans-serif;;
+    font-weight: 700;
     transition:all 0.3s;
-    color: #FF89AE;
+    color: #023047;
     cursor: pointer;
+    padding-left: 10px;
 }
 .cabecera__nombre:hover{
-    color: #00F4EB;
+    color: #219EBC;
+    transform: scale(1.2);
 }
 .cabecera__nav{
     width: 100%;
     height: auto;
     position: absolute;
     right: 0;
-    background: #FFCDBF;
-    opacity: .9;
+    background: #8ECAE6;
+    /*opacity: .9;*/
     padding-top: 30px;
     padding-bottom: 30px;
 }
+.cabecera__nav-lista{
+    justify-content: flex-end;
+}
+.cabecera__nav ul li a{
+    color: #FB8500;
+    padding: 10px;
+    transition: color 0.3s;
+}
+.cabecera__nav ul li a:hover{
+    color: #FFB703;
+}
+/********************/
 .seccion{
     height: 100vh;
 }
 #cv{
-    background: url("https://clara-am.github.io/img/34.jpg") fixed;
-    background-size:cover;
-    height:100vh;
+    /*background: url("https://clara-am.github.io/img/34.jpg") fixed;
+    background-size:cover;*/
 }
 #portfolio{
-    background: #CDF7F0;
 }
 #contacto{
-    background: #F3F4EE;
+}
+#cv h2,
+#portfolio h2,
+#contacto h2{
+    font-weight: 700;
+    color: #023047;
+    margin-top: 130px;
+    margin-bottom: 20px;
+}
+#contacto h2 span{
+    border-bottom: 3px solid currentColor;
+}
+.contacto__menu-redes{
+    font-size: 35px;
+}
+.contacto__menu-redes li{
+    text-align: center;
+}
+.contacto__menu-redes a{
+    display: block;
+    color: #FB8500;
+    transition: all 0.3s ease-in-out; 
+}
+.contacto__menu-redes a:hover{
+    transform: scale(1.25);
+    letter-spacing: 1px;
+}
+.contacto__bloque-titulo p{
+    margin-bottom: 20px;
+}
+.contacto__bloque-block{
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 17px;
+}
+.contacto__bloque-menu-caja{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*******************************************/
+/***************TABLET**********************/
+@media (min-width: 768px){
+    body{
+        font-size: 18px;
+    }
+    .fondito{
+        width: 520px;
+        height: 130px;
+        position: absolute;
+        z-index: -2;
+    }
+    .fondi-uno{
+        top: 100px; left: 0; 
+        background: #FB8500;
+    }
+    .fondi-dos{
+        top: 700px; right: 0;
+        background: #FFB703;
+    }
+    .fondi-tres{
+        top: 1200px;  left: 0; 
+        background: #023047;
+    }
+    .fondi-cuatro{
+        top: 1800px;  right: 0;
+        background: #219EBC; 
+    }
+    .fondi-cinco{
+        top: 2300px;  left: 0; 
+        background: #FFB703;
+    }
+    .fondi-seis{
+        top: 2700px; right: 0;
+        background: #023047;
+    }
+    .cabecera__nav{
+        font-size: 20px;
+    }
+    .cabecera__nav ul li a{
+        margin-right: 10px;
+        background-image: linear-gradient(#FB8500, #FB8500),
+          linear-gradient(#8ECAE6, #8ECAE6),
+          linear-gradient(#FFB703, #FFB703);
+        background-size: 20px 2px, 100% 2px, 0 2px;
+        background-position: calc(20px * -1) 100%, 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 2s linear, background-position 2s linear;
+    }
+    .cabecera__nav ul li a:hover{
+        background-size: 20px 2px, 0 2px, 100% 2px;
+        background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
+    }
+    #cv h2,
+    #portfolio h2,
+    #contacto h2{
+        margin-top: 180px;
+        font-size: 40px;
+    }
+    .contacto__menu-redes {
+        font-size: 48px;
+    }
+    .contacto__menu-redes{
+        align-self: flex-end;
+    }
+    .contacto__menu-redes li{
+        display: inline-block;
+        margin-right: 25px;
+    }
+    .contacto__bloque-block{
+        font-size: 20px;
+    }
+    .contacto__menu-redes {
+    font-size: 48px;
+}
+}
+/*******************************************/
+/***************ESCRITORIO******************/
+@media (min-width: 992px){
+    body{
+        font-size: 20px;
+    }
+    .cabecera__nav{
+        font-size: 22px;
+    }
+    .fondi-uno{
+        top: 100px; 
+    }
+    .fondi-dos{
+        top: 420px; 
+    }
+    .fondi-tres{
+        top: 580px;  
+    }
+    .fondi-cuatro{
+        top: 840px;  
+    }
+    .fondi-cinco{
+        top: 1070px;  
+    }
+    .fondi-seis{
+        top: 1400px; 
+    }
+    .contacto__bloque-block{
+        font-size: 22px;
+    }
 }
