@@ -101,9 +101,18 @@ FFB703 Honey yellow
 .cabecera__nav ul li a:hover{
     color: #FFB703;
 }
+.cabecera__nav-activa{
+    color: #FFB703 !important; 
+}
 /********************/
 .seccion{
     height: 100vh;
+}
+.fondito{
+    width: 520px;
+    height: 130px;
+    position: absolute;
+    z-index: -2;
 }
 #cv{
     /*background: url("https://clara-am.github.io/img/34.jpg") fixed;
@@ -155,39 +164,21 @@ FFB703 Honey yellow
 }
 /*******************************************/
 /***************TABLET**********************/
-@media (min-width: 768px){
+@media (min-width: 768px) and (orientation: landscape){
     body{
         font-size: 18px;
-    }
-    .fondito{
-        width: 520px;
-        height: 130px;
-        position: absolute;
-        z-index: -2;
     }
     .fondi-uno{
         top: 100px; left: 0; 
         background: #FB8500;
     }
     .fondi-dos{
-        top: 700px; right: 0;
+        top: 1100px; right: 0;
         background: #FFB703;
     }
     .fondi-tres{
-        top: 1200px;  left: 0; 
-        background: #023047;
-    }
-    .fondi-cuatro{
-        top: 1800px;  right: 0;
-        background: #219EBC; 
-    }
-    .fondi-cinco{
         top: 2300px;  left: 0; 
-        background: #FFB703;
-    }
-    .fondi-seis{
-        top: 2700px; right: 0;
-        background: #023047;
+        background: #219EBC;
     }
     .cabecera__nav{
         font-size: 20px;
@@ -227,11 +218,25 @@ FFB703 Honey yellow
     }
     .contacto__menu-redes {
     font-size: 48px;
+    }
 }
+@media (min-width: 768px) and (orientation: portrait){
+    .fondi-uno{
+        top: 100px; left: 0; 
+        background: #FB8500;
+    }
+    .fondi-dos{
+        top: 1100px; right: 0;
+        background: #FFB703;
+    }
+    .fondi-tres{
+        top: 2300px;  left: 0; 
+        background: #219EBC;
+    }
 }
 /*******************************************/
 /***************ESCRITORIO******************/
-@media (min-width: 992px){
+@media (min-width: 992px) and (orientation: landscape){
     body{
         font-size: 20px;
     }
@@ -239,24 +244,48 @@ FFB703 Honey yellow
         font-size: 22px;
     }
     .fondi-uno{
-        top: 100px; 
+        top: 120px; 
     }
     .fondi-dos{
-        top: 420px; 
+        top: 900px; 
     }
     .fondi-tres{
-        top: 580px;  
-    }
-    .fondi-cuatro{
-        top: 840px;  
-    }
-    .fondi-cinco{
-        top: 1070px;  
-    }
-    .fondi-seis{
-        top: 1400px; 
+        top: 1700px;  
     }
     .contacto__bloque-block{
         font-size: 22px;
+    }
+}
+@media (min-width: 992px) and (orientation: portrait){
+    .fondi-uno{
+        top: 120px; 
+    }
+    .fondi-dos{
+        top: 1500px; 
+    }
+    .fondi-tres{
+        top: 3000px;  
+    }
+}
+@media (min-width: 1200px) and (orientation: landscape){
+    .fondi-uno{
+        top: 100px; 
+    }
+    .fondi-dos{
+        top: 1200px; 
+    }
+    .fondi-tres{
+        top: 1900px;  
+    }
+}
+@media (min-width: 1200px) and (orientation: portrait){
+    .fondi-uno{
+        top: 100px; 
+    }
+    .fondi-dos{
+        top: 600px; 
+    }
+    .fondi-tres{
+        top: 900px;  
     }
 }

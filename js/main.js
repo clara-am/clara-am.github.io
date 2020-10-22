@@ -1,6 +1,9 @@
 $(document).ready(function () {  
-    $('ul li a').on('click',function(e){
+    var opcionMenu = $('.cabecera__nav ul li a');
+    opcionMenu.on('click',function(e){
         e.preventDefault();
+        opcionMenu.removeClass('cabecera__nav-activa');
+        $(this).addClass("cabecera__nav-activa");
         var strAncla=$(this).attr('href');
         $('body,html').stop(true,true).animate({
             scrollTop: $(strAncla).offset().top
