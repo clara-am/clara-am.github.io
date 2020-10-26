@@ -12,7 +12,8 @@
         body{
             font-family: 'Lato', sans-serif;
             box-sizing: border-box;
-            background: url("https://clara-am.github.io/img/34.jpg") fixed;
+            background: #F3F4EE;
+            /*background: url("https://clara-am.github.io/img/34.jpg") fixed;*/
             background-size:cover;
             height:100vh;
             display: flex; 
@@ -20,7 +21,7 @@
             margin: 0;
         }
         h2{
-            color: #FF8DB1;
+            color: #219EBC;
             font-weight: 700;
         }
 		p{ font-weight: bold}
@@ -33,14 +34,15 @@
 
         .imagen img{max-width: 25%;}
 
-        .boton{background-color: #40F5EC; border-radius: 30px; padding: 30px 50px; display: flex; justify-content:center; align-items:center;}
+        .boton{background-color: #FB8500; border-radius: 30px; padding: 30px 50px; display: flex; justify-content:center; align-items:center;transition: all 1s;}
 
-        .boton a{color: white; text-decoration: none; font-size: 20px; font-weight: 700; }
+        .boton a{color: #F3F4EE; text-decoration: none; font-size: 20px; font-weight: 700; }
+        .boton:hover{background: #FFB703}
         .words{
-            color: #40F5EC; 
+            color: #FB8500; 
             font-size: 0; 
             font-weight: 700; 
-            text-shadow: 1px 1px 3px #ccc;
+            text-shadow: 1px 1px 3px #F3F4EE;
         }
         .words span{
             animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
@@ -86,9 +88,7 @@
 </head>
 
 <body>
-
     <div class="cajas">
-
         <div class="caja__titulo">
             <div class="words words-1">
                 <span>4</span>
@@ -96,16 +96,13 @@
                 <span>4</span>
             </div>
         </div>
-
         <h2>Ups! Algo no fue bien...</h2>
 		<p> No te preocupes. Todo tiene solución. Pulsa en enlace de abajo. Te devolverá a un lugar mucho mejor.</p>
 
         <!--para que vuelva atras al inicio-->
 
         <div class="boton">
-
             <a href="https://github.com/clara-am">Volver a inicio</a>
-
         </div>
 
     </div>

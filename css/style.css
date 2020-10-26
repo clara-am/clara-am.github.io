@@ -33,7 +33,7 @@ p,blockquote{
     letter-spacing: 0.5px;
 }
 input,textarea,button:focus{outline: none;}
-h1,h2,h3,h4,h5,h6,p,blockquote {margin: 0; letter-spacing: 1px;}
+h1,h2,h3,h4,h5,h6,p,blockquote {margin: 0; letter-spacing: 1px;line-height: 1.9;}
 blockquote {
     border-left: 10px solid #FB8500;
     margin: 0 15px;
@@ -64,9 +64,17 @@ FFB703 Honey yellow
 /****************DISEÑO*******************/
 .cabecera{
     width: 100%;
+    height: 102px;
+}
+.cabecera__nav{
+    width: 100%;
+    height: auto;
     position: fixed;
     transition:all 0.3s;
     z-index:52;
+    background: #8ECAE6;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .cabecera__nombre{
     z-index:50;
@@ -79,16 +87,6 @@ FFB703 Honey yellow
 .cabecera__nombre:hover{
     color: #219EBC;
     transform: scale(1.2);
-}
-.cabecera__nav{
-    width: 100%;
-    height: auto;
-    position: absolute;
-    right: 0;
-    background: #8ECAE6;
-    /*opacity: .9;*/
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 .cabecera__nav-lista{
     justify-content: flex-end;
@@ -105,8 +103,9 @@ FFB703 Honey yellow
     color: #FFB703 !important; 
 }
 /********************/
-.seccion{
-    height: 100vh;
+.cabecera{
+    width: 100%;
+    padding-top: 103px;
 }
 .fondito{
     width: 520px;
@@ -114,24 +113,27 @@ FFB703 Honey yellow
     position: absolute;
     z-index: -2;
 }
-#cv{
-    /*background: url("https://clara-am.github.io/img/34.jpg") fixed;
-    background-size:cover;*/
+.cv,.portfolio,.contacto{
+    padding-top: 103px;
 }
-#portfolio{
-}
-#contacto{
-}
-#cv h2,
-#portfolio h2,
-#contacto h2{
+.cv h2,
+.portfolio h2,
+.contacto h2{
     font-weight: 700;
     color: #023047;
-    margin-top: 130px;
+    margin-top: 50px;
     margin-bottom: 20px;
 }
-#contacto h2 span{
+.cv h2 span,
+.portfolio h2 span,
+.contacto h2 span{
     border-bottom: 3px solid currentColor;
+}
+.contacto h6,
+.cv p,
+.contacto p,
+.contacto__bloque-titulo p{
+    margin-bottom: 20px;
 }
 .contacto__menu-redes{
     font-size: 35px;
@@ -147,9 +149,6 @@ FFB703 Honey yellow
 .contacto__menu-redes a:hover{
     transform: scale(1.25);
     letter-spacing: 1px;
-}
-.contacto__bloque-titulo p{
-    margin-bottom: 20px;
 }
 .contacto__bloque-block{
     margin-top: 20px;
@@ -180,6 +179,13 @@ FFB703 Honey yellow
         top: 2300px;  left: 0; 
         background: #219EBC;
     }
+    .cabecera{
+        width: 100%;
+        padding-top: 113px;
+    }
+    .cv,.portfolio,.contacto{
+        padding-top: 113px;
+    }
     .cabecera__nav{
         font-size: 20px;
     }
@@ -197,10 +203,9 @@ FFB703 Honey yellow
         background-size: 20px 2px, 0 2px, 100% 2px;
         background-position: calc(100% + 20px) 100%, 100% 100%, 0 100%;
     }
-    #cv h2,
-    #portfolio h2,
-    #contacto h2{
-        margin-top: 180px;
+    .cv h2,
+    .portfolio h2,
+    .contacto h2{
         font-size: 40px;
     }
     .contacto__menu-redes {
