@@ -61,7 +61,7 @@ FFB703 Honey yellow
 219EBC Blue green
 8ECAE6 Light cornflower blue
 */
-@import "https://unpkg.com/transition-style/transition.hackpack.min.css";
+@import "https://unpkg.com/transition-style/transition.min.css";
 /****************DISEÑO*******************/
 .cabecera{
     width: 100%;
@@ -162,21 +162,6 @@ FFB703 Honey yellow
     justify-content: center;
     align-items: center;
 }
-
-@keyframes swoopy {
-    from {
-        clip-path: var(--circle-top-right-out);
-    }
-    to {
-        clip-path: var(--circle-bottom-right-in);
-    }
-}
-
-[transition-style="in:custom:swoopy"] {
-    --transition__duration: 10s;
-    animation-name: swoopy;
-}
-  
   
 /*******************************************/
 /***************TABLET**********************/
@@ -186,15 +171,15 @@ FFB703 Honey yellow
     }
     .fondi-uno{
         top: 100px; left: 0; 
-        //background: #FB8500;
+        background: #FB8500;
     }
     .fondi-dos{
         top: 1100px; right: 0;
-        //background: #FFB703;
+        background: #FFB703;
     }
     .fondi-tres{
         top: 2300px;  left: 0; 
-        //background: #219EBC;
+        background: #219EBC;
     }
     .cabecera{
         width: 100%;
@@ -245,15 +230,15 @@ FFB703 Honey yellow
 @media (min-width: 768px) and (orientation: portrait){
     .fondi-uno{
         top: 100px; left: 0; 
-        //background: #FB8500;
+        background: #FB8500;
     }
     .fondi-dos{
         top: 1100px; right: 0;
-        //background: #FFB703;
+        background: #FFB703;
     }
     .fondi-tres{
         top: 2300px;  left: 0; 
-        //background: #219EBC;
+        background: #219EBC;
     }
 }
 /*******************************************/
