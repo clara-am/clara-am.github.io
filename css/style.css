@@ -77,15 +77,15 @@ FFB703 Honey yellow
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.cabecera__nombre{
+.cabecera__nombre a{
     z-index:50;
     font-weight: 700;
     transition:all 0.3s;
     color: #023047;
     cursor: pointer;
-    padding-left: 10px;
+    padding-left: 40px;
 }
-.cabecera__nombre:hover{
+.cabecera__nombre a:hover{
     color: #219EBC;
     transform: scale(1.2);
 }
